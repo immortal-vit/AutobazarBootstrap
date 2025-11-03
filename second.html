@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autobazar – Scrollspy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            position: relative;
+        }
+        section {
+            padding: 100px 20px;
+            border-bottom: 1px solid #ccc;
+            min-height: 100vh;
+        }
+        nav {
+            background-color: #0d6efd;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#scrollspy-nav" data-bs-offset="100" tabindex="0">
+
+<nav id="scrollspy-nav" class="navbar navbar-light bg-light fixed-top">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#osobni">Osobní auta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#suv">SUV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sportovni">Sportovní auta</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container" style="margin-top: 80px;">
+
+    <section id="osobni">
+        <h2>Osobní auta <span data-bs-toggle="tooltip" title="Vhodná do města!">ℹ️</span></h2>
+        <p>
+            Nabízíme široký výběr osobních vozů od malých hatchbacků po luxusní sedany.
+            <span data-bs-toggle="tooltip" title="Malé auto = nízká spotřeba!">🛈</span>
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vehicula, leo non suscipit
+            ullamcorper, justo sapien feugiat lacus, in dapibus risus sapien ut nunc. Integer euismod
+            velit nec risus luctus, id mollis turpis facilisis.
+        </p>
+        <p>
+            Cras ultricies lorem at leo ultrices, vitae fermentum urna efficitur. Sed porttitor,
+            odio ut sollicitudin laoreet, sapien libero fringilla justo, sit amet cursus sapien
+            urna id arcu.
+        </p>
+    </section>
+
+    <section id="suv">
+        <h2>SUV <span data-bs-toggle="tooltip" title="Pro rodinu a sport!">ℹ️</span></h2>
+        <p>
+            Prostorné SUV vhodné pro celou rodinu i sportovní výlety.
+            <span data-bs-toggle="tooltip" title="Vysoká světlá výška!">🛈</span>
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Suspendisse potenti.
+            Phasellus ac magna sit amet neque hendrerit convallis a vitae ligula. Donec dictum
+            malesuada purus, sed efficitur sapien.
+        </p>
+        <p>
+            Aenean scelerisque, eros sed fermentum finibus, risus mi consequat libero, in tincidunt
+            metus neque ac eros. Quisque sagittis tincidunt lorem, at vehicula sapien.
+        </p>
+    </section>
+
+    <section id="sportovni">
+        <h2>Sportovní auta <span data-bs-toggle="tooltip" title="Pro milovníky rychlosti!">ℹ️</span></h2>
+        <p>
+            Naše sportovní vozy poskytují adrenalin a styl na silnici.
+            <span data-bs-toggle="tooltip" title="Výkonný motor!">🛈</span>
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra purus sed purus
+            condimentum, nec tempus libero consequat. Vestibulum ante ipsum primis in faucibus orci
+            luctus et ultrices posuere cubilia curae.
+        </p>
+        <p>
+            Integer at felis sed sapien efficitur vulputate. Pellentesque habitant morbi tristique
+            senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+    </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    tooltipTriggerList.forEach(function (el) {
+        new bootstrap.Tooltip(el)
+    })
+</script>
+
+</body>
+</html>
